@@ -23,13 +23,13 @@
 # Invalid user input will prompt an error message and loop until condition is met
 
 # PLAN(PSEUDOCODE):
-# 0. Define constants  
+# 0. Define constants  (Suggested by Claude)
 #    -Minimum input limit and maximum input limit
 #    -Minimum square root and maximum square root
 # 1. Display a banner-like header with "square number finder" written inside
-# 2. Use while loop to validate the user input and prompt the error message for the lower limit
+# 2. Use a while loop to validate the user input and prompt the error message for the lower bound limit
 #    -I will want to validate user input is a integer and within the range of 1 and 10000 inclusive
-# 3. Use while loop to validate the user input and prompt the error message for the upper limit
+# 3. Use a while loop to validate the user input and prompt the error message for the upper bound limit
 #    -I will want to validate user input is a integer and within the range of the lower limit and 10000 inclusive
 # 4. Display results banner with previously entered lower and upper limit
 # 5. Using a for loop, calculate all square numbers and its square root within the user range under a banner
