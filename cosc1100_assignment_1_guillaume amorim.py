@@ -23,7 +23,7 @@
 # Invalid user input will prompt an error message and loop until condition is met
 
 # PLAN(PSEUDOCODE):
-# 0. Define constants  (Suggested by Claude)
+# 0. Define constants
 #    -Minimum input limit and maximum input limit
 #    -Minimum square root and maximum square root
 # 1. Display a banner-like header with "square number finder" written inside
@@ -42,7 +42,7 @@
 # Output will show the square number and square root of the number within the range of the user input entered under a banner
 
 # PROGRAM:
-# Constants: # (Suggested by Claude)
+# Constants:
 MIN_LIMIT = 1
 MAX_LIMIT = 10000
 MIN_SQUARE_ROOT = 1
@@ -52,7 +52,7 @@ MAX_SQUARE_ROOT = 100
 print("*************************************************************************************")
 print("                             SQUARE NUMBER FINDER")
 print("*************************************************************************************")
-print()  # (This line was suggested by Claude)
+print()
 
 # 2.Lower limit:
 is_valid_lower = False
@@ -65,10 +65,10 @@ while is_valid_lower != True:
             is_valid_lower = True
         else:
             print(f"Invalid input: Please enter a number between {MIN_LIMIT} and {MAX_LIMIT}.")
-            print()  # (This line was suggested by Claude)
+            print()
     else:
         print("Invalid input: Please enter a whole number.")
-        print()  # (This line was suggested by Claude)
+        print()
 
 # 3.Upper limit:
 is_valid_upper = False
@@ -81,10 +81,10 @@ while is_valid_upper != True:
             is_valid_upper = True
         else:
             print(f"Invalid input: Please enter a number between {lower_limit} and {MAX_LIMIT}.")
-            print()  # (This line was suggested by Claude)
+            print()
     else:
         print("Invalid input: Please enter a whole number.")
-        print()  # (This line was suggested by Claude)
+        print()
 
 # 4.Display results banner:
 print("*************************************************************************************")
