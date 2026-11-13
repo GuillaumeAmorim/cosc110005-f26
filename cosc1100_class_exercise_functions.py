@@ -3,6 +3,20 @@
 # Class: Intro to programming, COSC1100
 # In class activity: Functions
 
+# PROBLEM: Turn previous class activity into functions
+
+# PLAN(PSEUDOCODE):
+# Changing the class activity(arrays) for mid term grades into functions where possible.
+# I will seperate the code into functions:
+# - Newly added defined function to get a valid grade
+# - Defined a function to get all the grades
+# - Defined a function to calculate the weighted midterm mark
+# - Defined a function to display results
+# For the section where the program will run I added:
+# - Defined start() function to show where the program starts
+# I decided to write out all 4 activity grades instead of using a loop.
+# Finally, I call start() at the bottom of the file to run the program.
+
 # PROGRAM SECTION: 
 # Constants: 
 MIN_GRADE = 0
@@ -45,7 +59,7 @@ def calculate_midterm_mark(class_activities_total, assignment_grade, test_grade)
             + test_grade * TEST_WEIGHT) / TOTAL_WEIGHT
 
 # Defined a function to return the final results
-def final_results(class_activities_percentage, assignment_percentage, test_percentage, midterm_mark):
+def display_results(class_activities_percentage, assignment_percentage, test_percentage, midterm_mark):
     print()
     print(f"Class activities: {class_activities_percentage:.2f}%")
     print(f"Assignment 1: {assignment_percentage:.2f}%")
@@ -61,11 +75,11 @@ def start():
 
     class_activities_total = grades[0] + grades[1] + grades[2] + grades[3]
     class_activities_percentage = class_activities_total / NUMBER_OF_ACTIVITIES
-    assignment_percentage = grades[4]
-    test_percentage = grades[5]
+    assignment_percentage = grades[4] # Refers to Assignment 1
+    test_percentage = grades[5] # Refers to Test 1
 
     midterm_mark = calculate_midterm_mark(class_activities_total, assignment_percentage, test_percentage)
 
-    final_results(class_activities_percentage, assignment_percentage, test_percentage, midterm_mark)
+    display_results(class_activities_percentage, assignment_percentage, test_percentage, midterm_mark)
 
 start()
