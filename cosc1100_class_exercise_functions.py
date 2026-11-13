@@ -1,3 +1,8 @@
+# Made by: Guillaume Amorim
+# November/12/2026
+# Class: Intro to programming, COSC1100
+# In class activity: Functions
+
 # PROGRAM SECTION: 
 # Constants: 
 MIN_GRADE = 0
