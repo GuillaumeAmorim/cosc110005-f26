@@ -57,13 +57,14 @@
 #       End the program
 #   Validation:
 #   If user does not select a valid choice, tell the user input is invalid and show the menu again
+#   Call start() at the bottom of the file to run the program
 
 # PROGRAM:
 # Constants:
 ENGLISH_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 AL_BHED_ALPHABET = "YPLTAVKREZGMSHUBXNCDIJFQOWypltavkrezgmshubxncdijfqow"
 
-# Defining encode:
+
 def encode(message, key=1):
     current_text = message
 
@@ -88,7 +89,7 @@ def encode(message, key=1):
 
     return current_text
 
-# Defining decode:
+
 def decode(message, key=1):
     current_text = message
 
@@ -113,6 +114,7 @@ def decode(message, key=1):
         current_text = decrypted_string
 
     return current_text
+
 
 # This is where the main program starts:
 # Defined start() to keep showing the menu until user chooses to exit.
