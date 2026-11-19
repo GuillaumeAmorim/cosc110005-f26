@@ -20,7 +20,6 @@
 # "3" will exit program.
 # Invalid menu choice will produce an Error message
 
-
 # PLAN(PSEUDOCODE):
 # Define constants: ENGLISH_ALPHABET and AL_BHED_ALPHABET
 # 
