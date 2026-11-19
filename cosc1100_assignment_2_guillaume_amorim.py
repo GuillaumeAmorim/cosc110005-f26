@@ -155,10 +155,10 @@ start()
 #
 # Option 1, text to encode: Hello, it's nice to meet you.
 #   Expected according to Sample Output: Rammu, ed'c hela du saad oui.
-#   Actual:   Rammu, ed'c hela du saad oui.
+#   Actual: Rammu, ed'c hela du saad oui.
 #
 # Option 2, text to decode: Rammu, ed'c hela du saad oui.
 #   Expected According to Sample Output: Hello, it's nice to meet you.
-#   Actual:   Hello, it's nice to meet you.
+#   Actual: Hello, it's nice to meet you.
 #
 # Option 3: the program exits.
