@@ -43,6 +43,7 @@
 #   Match the letter positioning of English alphabet
 
 # Main program:
+#   Define start() to hold the menu loop
 #   Keep showing the menu until the user chooses to exit
 #   Each time, display the three options: encode, decode, or exit
 #   Ask the user to pick an option
@@ -113,32 +114,37 @@ def decode(message, key=1):
 
     return current_text
 
-# This is where the program starts:
-is_running = True
+# This is where the main program starts:
+# Defined start() to keep showing the menu until user chooses to exit.
+def start():
+    is_running = True
 
-while is_running:
-    print()
-    print("1) Encode text")
-    print("2) Decode text")
-    print("3) Exit program")
-    menu_choice = input("Please select an option (1-3): ")
-
-    if menu_choice == "1":
-        user_text = input("Please enter the text to encode: ")
-        encoded_result = encode(user_text)
-        print(f"Encoded text: {encoded_result}")
-
-    elif menu_choice == "2":
-        user_text = input("Please enter the text to decode: ")
-        decoded_result = decode(user_text)
-        print(f"Decoded text: {decoded_result}")
-
-    elif menu_choice == "3":
-        is_running = False
-
-    else:
+    while is_running:
         print()
-        print("Please select a valid option between 1 and 3.")
+        print("1) Encode text")
+        print("2) Decode text")
+        print("3) Exit program")
+        menu_choice = input("Please select an option (1-3): ")
+
+        if menu_choice == "1":
+            user_text = input("Please enter the text to encode: ")
+            encoded_result = encode(user_text)
+            print(f"Encoded text: {encoded_result}")
+
+        elif menu_choice == "2":
+            user_text = input("Please enter the text to decode: ")
+            decoded_result = decode(user_text)
+            print(f"Decoded text: {decoded_result}")
+
+        elif menu_choice == "3":
+            is_running = False
+
+        else:
+            print()
+            print("Please select a valid option between 1 and 3.")
+
+
+start()
 
 # DESKCHECK:
 # Menu choice 1, 2 or 3: runs encode, decode or exit
