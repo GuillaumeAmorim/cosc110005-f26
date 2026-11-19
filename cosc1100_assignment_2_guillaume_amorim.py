@@ -41,7 +41,7 @@
 # Define decode(message, key=1):
 #   Same as the steps we did for encode, but instead we match against Al Bhed alphabet
 #   Match the letter positioning of English alphabet
-
+#
 # Main program:
 #   Define start() to hold the menu loop
 #   Keep showing the menu until the user chooses to exit
