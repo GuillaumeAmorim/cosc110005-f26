@@ -58,8 +58,6 @@
 #   Validation:
 #   If user does not select a valid choice, tell the user input is invalid and show the menu again
 
-
-
 # PROGRAM:
 # Constants:
 ENGLISH_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
