@@ -3,6 +3,9 @@
 # Class: Intro to programming, COSC1100
 # Assignment 2: Secret Codes (Arrays & Functions)
 
+# CITATIONS and AI use:
+# Gemini (by Google) was used as a study aid to clarify what the cipher/key logic was asking for and how the key system translates into code.
+
 # PROBLEM:
 # Create a simple Python application that lets a user encode English text into Al Bhed,
 # or decode Al Bhed text back into English, using a substitution cipher that can be
@@ -21,50 +24,39 @@
 # Invalid menu choice will produce an Error message
 
 # PLAN(PSEUDOCODE):
-# Define constants: ENGLISH_ALPHABET and AL_BHED_ALPHABET
-# 
-# Define encode(message, key=1):
-#   Set current_text to message
-#   Repeat key number of times:
-#       Start with empty string called encrypted_string
-#       For each letter_index, counting up from 0 to the length of input: current_text
-#           Assume that there is no match found (match_found = False)
-#           For each alphabet_index in English alphabet:
-#               If the letter at letter_index matches the letter at alphabet_index:
-#                   Add the Al Bhed letter at alphabet_index to the encrypted_string
-#                   Set match_found to True
-#           If after going through whole alphabet, match_found is False
-#               Add the original letter at letter_index to the encrypted string
-#       Set current_text to encrypted_string
-#   Return current_text
-# 
-# Define decode(message, key=1):
-#   Same as the steps we did for encode, but instead we match against Al Bhed alphabet
-#   Match the letter positioning of English alphabet
-#
-# Main program:
-#   Define start() to hold the menu loop
-#   Keep showing the menu until the user chooses to exit
-#   Each time, display the three options: encode, decode, or exit
-#   Ask the user to pick an option
-#   If the user picks menu option 1:
-#       Ask for the text the user wishes to encode
-#       Encode the input and print the result
-#   If the user picks menu option 2:
-#       Ask for the text to decode
-#       Decode the input and print the result
-#   If the user picks 3:
-#       End the program
-#   Validation:
-#   If user does not select a valid choice, tell the user input is invalid and show the menu again
-#   Call start() at the bottom of the file to run the program
+# 0. Define constants: 
+#       -ENGLISH_ALPHABET and AL_BHED_ALPHABET
+# 1. Define encode(message, key=1):
+#       -I will repeat the substitution (key) a number of times, using current_text to hold the result for each pass
+#       -For each character, I will compare it to each letter in the English alphabet
+#       -If it matches then I will add the Al Bhed letter at the same position to encrypted_string and match_found will be set to True
+#       -If match_found is still False, I will add the original character (spaces, punctuation and numbers)
+#       -Finally, I will return the encoded text           
+# 2. Define decode(message, key=1):
+#       -Same steps as encode, but instead we match against Al Bhed alphabet and add the English letter at the same position
+# 3. Main program:
+#       -Define start() to hold the menu loop
+#       -Keep showing the menu until the user chooses to exit
+#       -Each time, display the three options: encode, decode, or exit
+#       -Ask the user to pick an option
+# 4. If the user picks menu option 1:
+#       -Ask for the text the user wishes to encode
+#       -Encode the input and print the result
+# 5. If the user picks menu option 2:
+#       -Ask for the text to decode
+#       -Decode the input and print the result
+# 6. If the user picks 3:
+#       -End the program
+# 7. Validation:
+#       -If user does not select a valid choice, tell the user input is invalid and show the menu again
+# 8. Call start() at the bottom of the file to run the program
 
 # PROGRAM:
-# Constants:
+# 0. Constants:
 ENGLISH_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 AL_BHED_ALPHABET = "YPLTAVKREZGMSHUBXNCDIJFQOWypltavkrezgmshubxncdijfqow"
 
-
+# 1. Encode function:
 def encode(message, key=1):
     current_text = message
 
@@ -90,6 +82,7 @@ def encode(message, key=1):
     return current_text
 
 
+# 2. Decode function:
 def decode(message, key=1):
     current_text = message
 
@@ -116,7 +109,7 @@ def decode(message, key=1):
     return current_text
 
 
-# This is where the main program starts:
+# 3. This is where the main program starts:
 # Defined start() to keep showing the menu until user chooses to exit.
 def start():
     is_running = True
