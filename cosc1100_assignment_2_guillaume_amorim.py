@@ -109,8 +109,7 @@ def decode(message, key=1):
     return current_text
 
 
-# 3. This is where the main program starts:
-# Defined start() to keep showing the menu until user chooses to exit.
+# 3. Defined start(), This is where the main program starts:
 def start():
     is_running = True
 
